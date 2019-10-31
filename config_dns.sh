@@ -5,7 +5,7 @@ sed -i '/listen-on port 53 { 127.0.0.1; };/ c #listen-on port 53 { 127.0.0.1; };
 
 sed -i '/listen-on-v6 port 53 { ::1; };/ c #listen-on-v6 port 53 { ::1; };' /etc/named.conf
 
-sed -i '/allow-query { localhost; 192.168.217.0/24 };/c allow-query { localhost: 192.168.217.0/24 };' /etc/named.conf 
+sed -i '/allow-query     { localhost; };/ c allow-query { localhost; 192.168.217.0/24; };' /etc/named.conf
 
 cat <<EOF> /etc/named.conf
 zone "server" IN{
