@@ -57,4 +57,4 @@ cat <<EOF>> /var/named/server.rev
 slave01 IN A 192.168.217.129
 
 129 IN PTR slave01.server.
-
+EOF
