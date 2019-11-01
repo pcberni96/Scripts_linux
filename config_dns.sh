@@ -23,7 +23,6 @@ zone "217.168.192.in-addr.arpa" IN{
 EOF
 
 cat <<EOF>> /var/named/server.db
-//Doc Server
 \$TTL 86400
 @ IN SOA slave01.server. root.server. (
         2019061800 ;Serial
@@ -32,7 +31,7 @@ cat <<EOF>> /var/named/server.db
         604800 ;Expire
         86400 ;Minimun TTL
 )
-@ IN NS slave01.server
+@ IN NS slave01.server.
 
 @ IN A 192.168.217.129
 
@@ -41,7 +40,6 @@ EOF
 
 
 cat <<EOF>> /var/named/server.rev
-//Doc rev
 \$TTL 86400
 @ IN SOA slave01.server. root.server. (
         2019061800 ;Serial
